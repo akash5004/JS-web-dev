@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener use eg</title>
+</head>
+<body>
+
+    <button id="btn">Click to check time</button>
+    <p id="time">Time will be shown here</p>
+
+    <script>
+        const btn = document.getElementById("btn");
+        btn.style.backgroundColor="skyblue"
+        btn.style.color="red"
+
+        btn.addEventListener("click", function() {
+            document.getElementById("time").innerHTML = Date();
+        });
+    </script>
+
+</body>
+</html>

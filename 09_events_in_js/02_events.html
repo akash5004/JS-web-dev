@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button id="btn">Click me!</button>
+</body>
+<script>
+    // document.getElementById("btn").onclick=function(){
+    //     alert("helloo!")
+    // }
+    document.getElementById("btn").addEventListener('click', function(){  //this is best method of events
+        alert("helloo again!!")
+    }, false)
+    //important events
+    //type,timestamp, defaultPrevented
+    //target, toElement, srcElement,currentTarget
+    //clientX, clientY, screenX, screenY,
+    //altkey, ctrlkey,shiftkey,keyCode
+    document.getElementById("btn").addEventListener('click', function(e){  //inspect karo
+        console.log(e);
+    }, false)
+
+</script>
+</html>

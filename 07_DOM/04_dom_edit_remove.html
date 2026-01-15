@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - edit and remove elements</title>
+</head>
+<body style="background-color: rgb(32, 29, 29); color: aliceblue;">
+        <ul class="language">
+            <li>JavaScript</li>
+        </ul>
+</body>
+
+<script>
+    function addLanguage(langName){
+        const li= document.createElement("li")
+        li.innerHTML=`${langName}`
+        document.querySelector(".language").appendChild(li)
+    }
+
+    function addLangOptimisedCode(langName){
+        const li= document.createElement("li")
+        const text= document.createTextNode(langName)
+        li.appendChild(text)
+        document.querySelector(".language").appendChild(li)
+    }
+
+    addLanguage("python")
+    addLanguage("C++")
+    addLangOptimisedCode("Swift")
+    addLangOptimisedCode("C#")
+
+
+
+    //edit in dom
+    const seconLanguage=document.querySelector("li:nth-child(2)")
+    seconLanguage.innerHTML= "Java"
+
+</script>
+</html>
