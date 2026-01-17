@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut and clearTimeOut</title>
+</head>
+<body>
+    <h2>setTimeout and clearTimeout methods</h1>
+    <input type="button" id="stop" value="stop">
+
+</body>
+
+<script>
+   //syntax==  setTimeout(function, delayInMilliseconds)
+   //provided by web api
+
+//    setTimeout(function(){
+//         console.log("console after 5 second");
+//     }, 5000)
+
+   const printMsg= function(){
+        console.log("console after 5 second");
+    }
+
+    setTimeout(printMsg,5000);
+
+    const changeTextH2= function() {
+        document.querySelector("h2").innerHTML="learning asynchronous JS"
+    }
+
+    const changeMe= setTimeout(changeTextH2, 2000)
+
+    document.getElementById('stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("stopped");
+
+    })
+
+</script>
+</html>
