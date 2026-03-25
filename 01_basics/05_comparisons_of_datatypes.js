@@ -1,22 +1,14 @@
-console.log(2 > 1);   // true
-console.log(2 >= 1);  // true
-console.log(2 < 1);   // false
-console.log(2 == 1);  // false
-console.log(2 != 1);  // true
 //string vs number
 //In JavaScript, when a string is compared to a number, JS tries to convert the string to a number.
 console.log("2" > 1);   // true
 console.log("02" > 1);  // true
 
 //null comparisons
-console.log(null > 0);   // false
-console.log(null == 0);  // false
-console.log(null >= 0);  // true
-/*null > 0 → null becomes 0. → 0 > 0 → false
+console.log(null > 0);   // false  //*null > 0 → null becomes 0. → 0 > 0 → false
+console.log(null == 0);  // false  //null == 0 → ❌ special rule: null is only equal to undefined, not to 0. → false
+console.log(null >= 0);  // true   //null >= 0 → null becomes 0. → 0 >= 0 → true */
 
-null == 0 → ❌ special rule: null is only equal to undefined, not to 0. → false
 
-null >= 0 → null becomes 0. → 0 >= 0 → true */
 //undefined comparisons
 console.log(undefined == 0); // false
 console.log(undefined > 0);  // false
@@ -25,7 +17,8 @@ console.log(undefined < 0);  // false
 
 When comparing undefined to a number (>, <), JS converts it to NaN.
 
-Any comparison with NaN is false. */
+Any comparison with NaN is false.*/
+
 //=== strictly equality
 // Loose equality (==)
 console.log(5 == "5");     // true  → string "5" is converted to number 5

@@ -4,14 +4,14 @@ console.log("=== 1. Declaring Strings ===");
 let str1 = "Hello";
 let str2 = 'World';
 let str3 = `Hello ${str2}`; // Template literal
-console.log(str1, str2, str3);
+console.table([str1, str2, str3]);
 
 //Once created , a string cannot be changed but can be replaced
 let str = "Hello";
 str[0] = "J"; // ❌ No effect
 str = "Jello"; // ✅ New string assigned
 
-console.log("\n"+str);
+console.log(str);
 
 
 
@@ -33,23 +33,25 @@ console.log(word.toUpperCase()); // JAVASCRIPT
 console.log(word.toLowerCase()); // javascript
 
 
-console.log("\n=== 5. Searching in Strings ===");
+console.log("\n=== 5. Extracting Substrings ===");
 
-let text = "Hello JavaScript World";
-console.log(text.indexOf("Java"));      // 6
-console.log(text.lastIndexOf("a"));     // 9
-console.log(text.includes("World"));    // true
-console.log(text.startsWith("Hello"));  // true
-console.log(text.endsWith("d"));    // true
-
-
-console.log("\n=== 6. Extracting Substrings ===");
 console.log(word.slice(1, 4));     // Java
 console.log(word.substring(4, 10));// Script
 console.log(word.substr(0, 4));    // Java (deprecated but works)
 
 
+console.log("\n=== 6. Searching in Strings ===");
+
+let text = "Hello JavaScript World";
+console.log(text.indexOf("Java"));      // 6
+console.log(text.lastIndexOf("a"));     // 9
+console.log(text.includes("Worl"));    // true
+console.log(text.startsWith("Hello"));  // true
+console.log(text.endsWith("d"));    // true
+
+
 console.log("\n=== 7. Trimming ===");
+
 let messy = "   Trim me!   ";
 console.log(messy.trim());      // "Trim me!"
 console.log(messy.trimStart()); // "Trim me!   "

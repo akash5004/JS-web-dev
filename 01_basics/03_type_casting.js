@@ -1,17 +1,20 @@
 //conversion to number
 console.log("--typecasting to number---");
 
-let str = "123"; //typeof-String
-let num = Number(str); // num is 123 (a number) i.e: string is typecasted to number
+let str = "123";
+console.log(typeof str); //string
+
+let num = Number(str); // num = 123 (a number) i.e: string is typecasted to number
 console.log(num);
-console.log(typeof num);
+console.log(typeof num); //number
+
 console.log("---------------")
 
 
 let bool = true; //typeof-Boolean
-let numFromBool = Number(bool); // numFromBool is 1 i.e; bool is typecasted to number
+let numFromBool = Number(bool); // numFromBool = 1 i.e; bool is typecasted to number
 console.log(numFromBool);
-console.log(typeof numFromBool);
+console.log(typeof numFromBool); //number
 
 console.log("---------------")
 
@@ -19,20 +22,23 @@ console.log("---------------")
 let emptyStr = "";
 let numFromEmpty = Number(emptyStr); // numFromEmpty is 0
 console.log(numFromEmpty);
-console.log(typeof numFromEmpty);
+console.log(typeof numFromEmpty); //number
 
 console.log("---------------")
 
 let randomStr = "123a"; //typeof-string
-let numFrom_randomStr = Number(randomStr); // numFrom_randomStr is NaN
-console.log(numFrom_randomStr);
+let numFrom_randomStr = Number(randomStr);
+console.log(numFrom_randomStr);         // numFrom_randomStr = NaN
+
+console.log(typeof numFrom_randomStr); //number
+
 
 
 console.log("----typecasting to string-----")
 
 let num2= 123;
-let str2 = String(num2); // str2 is "123"
-console.log(str2);
+let str2 = String(num2);
+console.log(str2);     // str2 is "123"
 console.log(typeof str2);
 
 console.log("---------------")
@@ -68,6 +74,7 @@ let bool5 = Boolean(obj); // bool5 is true
 console.log(bool5);
 
 console.log("-------------")
+
 let n=null;
 let m=Number(n);
 console.log(m)
@@ -78,18 +85,18 @@ You can convert a value to a number using several methods:
 Number() function: This is a generic way to convert any data type to a number.
 
 null becomes 0.
-
 true becomes 1, and false becomes 0.
 
 A String containing only digits will be converted to the corresponding number.
 
 An empty String or a String with only spaces becomes 0.
 
-Any other String (like 'hello') becomes NaN (Not a Number).
+Any other String (like 'hello' or "hello1234" or "hi AK") becomes NaN (Not a Number).
 
 undefined becomes NaN.
 
  */
+
 /*b. Conversion to a String
 You can convert a value to a string using these methods:
 
@@ -131,11 +138,11 @@ parseInt() parses a string and returns an integer.
 
 parseFloat() parses a string and returns a floating-point number.*/
 let str5 = "100.5";
-let int = parseInt(str5); // int is 100
+let int = parseInt(str5); // int = 100
 
 
 let str6 = "100.5px";
-let float = parseFloat(str6); // float is 100.5
+let float = parseFloat(str6); // float = 100.5
 
 let str7 = "a100";
 let int2 = parseInt(str7); // int2 is NaN (parsing starts from the beginning)
