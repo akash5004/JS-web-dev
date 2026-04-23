@@ -48,17 +48,28 @@ console.log(arr3);
 arr3.shift()  //shift- removes from start
 // console.log(arr3)
 
-//concat
-const result= arr1.concat(arr2, arr3, "newValue", "another value")
-console.log(result);
+let ar1 = [1,2];
+let ar2 = [3,4];
+
+let ar3 = ar1.concat(ar2, 5,6,"a", "b"); //can also add extra elements after concatenation
+console.log("hiiii:",ar3);
+
+//-------------------------------
+let ar4=[ar1,ar2];
+console.log(ar4); //   [ [ 1, 2 ], [ 3, 4 ] ]
+
+
 
 //spread
-let a = [1, 2];
-let b = [3, 4];
-let c = [5, 6];
 
-let afterSpread = [...a, ...b, ...c];
+let x = [1, 2];
+let y = [3, 4];
+let z = [5, 6];
+
+let afterSpread = [...x, ...y, ...z];
 console.log(afterSpread);  //[1, 2, 3, 4, 5, 6]
+
+//
 
 
 
@@ -67,11 +78,11 @@ console.log(afterSpread);  //[1, 2, 3, 4, 5, 6]
 //by default use , comma sepARATOR
 
 const ar=[1,2,3,4,"H","e","l","l","o"]
-const ar_join =ar.join("") //empty/nothing between the string produced
-console.log(ar_join, "if no argument is given then comma separates the items" , "type after using join method:" ,typeof ar_join)
+const ar_join =ar.join() //empty/nothing between the string produced
+console.log(ar_join, ":if no argument is given then comma separates the items" , "type after using join method:" ,typeof ar_join)
 
-const ar2_join=ar.join("#")
-console.log(ar2_join);
+console.log(ar.join("$"));
+
 
 //slice(start, end)- extract portion
 
@@ -84,6 +95,11 @@ console.log("Array after slice:", nums); //arr remains same
 console.log(nums.splice(1,4));
 
 console.log("ARRAY AFTER SPLICE:" , nums ) //array got reduced after splice
+
+const p=[3,4,2,5,1,0,]
+console.log(p.sort());
+
+
 //array.reverse
 // changes original array
 const r = [1,2,3,4,5 , "a" ,"b"]
@@ -95,6 +111,8 @@ const reversedNums = nums.slice().reverse();
 
 console.log("Original:", nums1);       // [10, 20, 30, 40]
 console.log("Reversed:", reversedNums); // [40, 30, 20, 10]
+
+
 
 
 

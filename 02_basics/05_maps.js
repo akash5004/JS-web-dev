@@ -1,7 +1,7 @@
 //creating a map
 const myMap= new Map()
 
-//adding key-valu pairs
+//adding key-value pairs
 myMap.set("Name" , "Akash")
 myMap.set("age", 20)
 myMap.set("course", "cse")
@@ -22,7 +22,7 @@ console.log(myMap.size);
 console.log(myMap.has("salary")); //false
 console.log(myMap.has("age"));    //true
 
-//looping though map
+//looping though map-- using for..of loop
 for (const [key, val] of myMap) {
     console.log(key , "->", val);
 }
@@ -32,5 +32,7 @@ myMap.delete("course")
 //final map after deleting
 console.log(myMap);
 
+//after delete size
+console.log(myMap.size);
 
 

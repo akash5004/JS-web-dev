@@ -1,43 +1,42 @@
 //function declaration
 function greet(){
-
     //function body- it is block of code that is executed when the functioin is called
-
-    console.log("Hi,there!");
-    console.log("HOW R U?");
-                }
+    console.log("Hi there!");
+    }
 
   greet(); //function call
 
-  function sq(x){      //x is parameter :- no need to give type of parameter in JS
-    // let sqr=x*x;
+  function sq1(x){
+    console.log("sqr is:", x*x);
+  }
+  sq1(5); //function call:Output: sqr is: 25
+
+  const result1= sq1(5); //function call:Output: sqr is: 25
+  console.log("result1 is: ",result1); //gives undefined because fun sq does not return any value it only logs/prints
+
+
+  function sq2(x){
+    // const sqr=x*x;
     // return sqr;
     return x*x;
   }
 
+const result2 = sq2(6);     //6 is argument.... result2 stores returned value of sq2(x) in the variable result but does not print anything..This stored value can be use in other places in future
+console.log(result2);    //36
+console.log(sq2(8));        //directly printing the function return value
+
   function IsLoggedIn(username){
-    if(username==undefined){
+    if(!username){
       console.log("please enter a valid username");
       return
     }
+    else {
     return `${username} just logged into instagram`
+    }
   }
-
-// let result = sq(6);     //6 is argument,,,// store returned value of sq(x) in the variable result
-// console.log(result);    //36
-
-console.log(sq(6));        //directly printing the function return value
 
 console.log(IsLoggedIn("Aniket"));
 console.log(IsLoggedIn());
 
 
 
-
-/*
-  function sq(x) {
-  console.log(x * x);  // prints directly
-}
-sq(6); //function call
-
- */

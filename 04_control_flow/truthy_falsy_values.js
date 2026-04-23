@@ -17,7 +17,7 @@ if (0) console.log("Won't run");
 if ("0") console.log("Will run");
 
 //common falsy values--
-//false , 0 , -0 ,0n BigInt Zero, "" empty string null , undefined, NaN
+//false , 0 , -0 ,0n or BigInt Zero, "" or empty string, null , undefined, NaN
 //Everything else is truthy--
 //eg."false"
 /* "0"

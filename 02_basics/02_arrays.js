@@ -1,8 +1,7 @@
 const arr1=[2,,4,6,8,10,[3,6,9],4,8,[5,10,15,[6,12,18]]]
 
-//console.log(arr1.flat(Infinity));  //for direct printing
-const totalArr= arr1.flat(Infinity)
-console.log(totalArr);
+console.log(arr1.flat(Infinity)); 
+
 //searching
 const fruits = ["apple","2" , "banana", "mango", "banana"];
 

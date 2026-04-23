@@ -7,6 +7,7 @@ else{
 }
 
  //=== this checks both value and type
+ 
  let x="3"; //string type
  if(3 ==="3"){
     console.log("True")
